@@ -8,8 +8,8 @@ public class Main {
         String[] arab = {"1","2","3","4","5","6","7","8","9","10"};
         String[] roma = {"I","II","III","IV","V","VI","VII","VIII","IX","X"};
         char op = ' ';
-        float ans=0;
-        int num1=0, num2=0;
+        double ans=0.0000;
+        double num1=0, num2=0;
         System.out.println("Давайте посчитаем!");
         System.out.println("Введите выражение для расчёта. Используйте числа от 1 до 10 римскими или арабскими цифрами:");
 
@@ -79,11 +79,10 @@ public class Main {
                 break;
             default: System.out.println("Ошибка! Вы не использовали ни одного оператора. Я не могу произвести расчёт! ");
                 break;
-             //   return;
         }
         if (flagR1 && flagR2) {
-        System.out.println("Ответ: "+ NumberToRoman(Float.toString(ans)));}
-        else {System.out.println("Ответ: "+ ans);}
+        System.out.println("Ответ: "+ NumberToRoman(Double.toString(ans)));}
+        else {System.out.println("Ответ: "+ Double.toString(ans));}
 
     }
     private static int romanToNumber(String roman) {
