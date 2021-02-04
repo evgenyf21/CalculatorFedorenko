@@ -26,7 +26,6 @@ public class Main {
         else {System.out.println("Ошибка! Вы не использовали ни одного оператора. Я не могу произвести расчёт! ");
             System.exit(0);}}}}
 
-        char[] ch = vvod.toCharArray();
         String[] str = vvod.split("[-+/*]",0);
         str[0] = str[0].trim();
         str[1] = str[1].trim();
