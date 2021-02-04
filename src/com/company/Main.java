@@ -26,7 +26,6 @@ public class Main {
         else {System.out.println("Ошибка! Вы не использовали ни одного оператора. Я не могу произвести расчёт! ");
             System.exit(0);}}}}
 
-        char[] ch = vvod.toCharArray();
         String[] str = vvod.split("[-+/*]",0);
         str[0] = str[0].trim();
         str[1] = str[1].trim();
@@ -66,10 +65,6 @@ public class Main {
                         System.exit(0);};
 
                     }
-
-        if ((num1 > 10 || num1 < 1) || (num2 > 10 || num2 < 1))
-            {System.out.println("Ошибка! Числа выходят за пределы заданного диапазона. Я не могу произвести расчёт! ");
-                System.exit(0);}
 
 
 
