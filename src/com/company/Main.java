@@ -82,7 +82,7 @@ public class Main {
         }
         if (flagR1 && flagR2) {
         System.out.println("Ответ: "+ NumberToRoman(Double.toString(ans)));}
-        else {System.out.println("Ответ: "+ Double.toString(ans));}
+        else {System.out.println("Ответ: "+ ans);}
 
     }
     private static int romanToNumber(String roman) {
