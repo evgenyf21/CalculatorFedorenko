@@ -6,10 +6,12 @@ public class Main {
 
     public static void main(String[] args) {
         String[] arab = {"1","2","3","4","5","6","7","8","9","10"};
+
         String[] roma = {"I","II","III","IV","V","VI","VII","VIII","IX","X"};
+
         char op = ' ';
-        double ans=0.0000;
-        double num1=0, num2=0;
+        int ans=0;
+        int num1=0, num2=0;
         System.out.println("Давайте посчитаем!");
         System.out.println("Введите выражение для расчёта. Используйте числа от 1 до 10 римскими или арабскими цифрами:");
 
@@ -67,7 +69,6 @@ public class Main {
                     }
 
 
-
         switch(op) {
             case '+': ans = num1 + num2;
                 break;
@@ -81,7 +82,8 @@ public class Main {
                 break;
         }
         if (flagR1 && flagR2) {
-        System.out.println("Ответ: "+ NumberToRoman(Double.toString(ans)));}
+            System.out.println("Ответ арабскими: "+ ans);
+            System.out.println("Ответ римскими: "+ NumberToRoman(ans));}
         else {System.out.println("Ответ: "+ ans);}
 
     }
@@ -111,30 +113,20 @@ public class Main {
         }
     }
 
-    private static String NumberToRoman(String arab) {
-        if (arab.contains("1")) {
-            return "I";
-        } else if (arab.contains("2")) {
-            return "II";
-        } else if (arab.contains("3")) {
-            return "III";
-        } else if (arab.contains("4")) {
-            return "IV";
-        } else if (arab.contains("5")) {
-            return "V";
-        } else if (arab.contains("6")) {
-            return "VI";
-        } else if (arab.contains("7")) {
-            return "VII";
-        } else if (arab.contains("8")) {
-            return "VIII";
-        } else if (arab.contains("9")) {
-            return "IX";
-        } else if (arab.contains("10")) {
-            return "X";
-        } else {
-            return "--1";
-        }
-    }
+    private static String NumberToRoman(Integer n) {
+        int i = 8;
+        String res = "";
+        Integer[] arab2 = {1, 4, 5, 9, 10, 40, 50, 90, 100};
+        String[] roma2 = {"I", "IV", "V", "IX", "X", "XL", "L", "XC", "C"};
+
+            while (i>=0) {
+                while (arab2[i]<=n) {
+                    res = res + roma2[i];
+                    n = n - arab2[i];
+                }
+                i = i-1;}
+
+        return res; }
+
 
 }
